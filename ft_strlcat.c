@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 13:00:35 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/18 17:01:02 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/21 15:01:50 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 /*
 ** Appends string 'src' to the end of 'dst'. Will NUL-terminate unless
-** 'n' is 0 or the original 'dst' string was incorrect.
+** 'dstsize' is 0 or the original 'dst' string was incorrect.
 */
 
-size_t	ft_strlcat(char *dst, char *src, unsigned int n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -28,14 +28,14 @@ size_t	ft_strlcat(char *dst, char *src, unsigned int n)
 	size = 0;
 	while (src[size] != '\0')
 		size++;
-	while (dst[i] && (i < n))
+	while (dst[i] && (i < dstsize))
 		i++;
-	while (src[j] && ((i + j + 1) < n))
+	while (src[j] && ((i + j + 1) < dstsize))
 	{
 		dst[i + j] = src[j];
 		j++;
 	}
-	if (i != n)
+	if (i != dstsize)
 		dst[i + j] = '\0';
 	return (i + size);
 }

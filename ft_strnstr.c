@@ -6,34 +6,34 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 11:17:39 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/14 14:37:01 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/21 15:19:22 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Locates the first occurrence of the NUL-terminated string 'chk' in
-** string 'buf', where no more than 'n' characters are searched. Characters
+** Locates the first occurrence of the NUL-terminated string 'needle' in
+** string 'haystack', where no more than 'n' characters are searched. Characters
 ** after a '\0' are not searched.
 */
 
-char	*ft_strnstr(const char *buf, const char *chk, unsigned int n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	unsigned int	i;
 	unsigned int	chksize;
 
-	chksize = ft_strlen(chk);
+	chksize = ft_strlen(needle);
 	if (!chksize)
-		return ((char *)buf);
+		return ((char *)haystack);
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		if ((ft_strncmp((char *)&buf[i], (char *)chk, chksize)) == 0)
+		if ((ft_strncmp((char *)&haystack[i], (char *)needle, chksize)) == 0)
 		{
-			if ((chksize + i) > n)
+			if ((chksize + i) > len)
 				return (0);
-			return ((char *)&buf[i]);
+			return ((char *)&haystack[i]);
 		}
 		i++;
 	}

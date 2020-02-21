@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 15:07:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/19 20:17:53 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/21 13:23:36 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** Allocates and returns an array of strings obtained by splitting
-** ’buf’ using the character ’ch’ as a delimiter.  The array must be
+** ’s’ using the character ’ch’ as a delimiter.  The array must be
 ** ended by a NULL pointer.
 */
 
@@ -62,18 +62,18 @@ int		*ft_setnull(int *i)
 	return (0);
 }
 
-char	**ft_split(char const *buf, char ch)
+char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	char	*temp;
 	int		i[3];
 
-	if (!buf || !ch || !(temp = ft_strdup(buf)) ||
-		!(result = ft_setarray(temp, ch)))
+	if (!s || !c || !(temp = ft_strdup(s)) ||
+		!(result = ft_setarray(temp, c)))
 		return (NULL);
 	ft_setnull(i);
 	i[0] = ft_strlen(temp);
-	ft_setdelim(temp, ch);
+	ft_setdelim(temp, c);
 	while (i[2] < i[0])
 	{
 		if (temp[i[2]] == '\0')

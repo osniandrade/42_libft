@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 09:48:19 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/19 16:58:46 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/21 13:20:44 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 ** begins at index 'start' and is of maximum size 'n'.
 */
 
-char	*ft_substr(char const *buf, unsigned int start, unsigned int n)
+char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 {
 	char	*result;
 
-	if (!buf)
+	if (!s)
 		return (NULL);
-	if (!(result = (char *)malloc(sizeof(char) * n + 1)))
+	if (!(result = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	if (start > (ft_strlen(buf) - n))
+	if (start > (ft_strlen(s) - len))
 		return (ft_strdup(""));
-	ft_strlcpy(result, &buf[start], n + 1);
+	ft_strlcpy(result, &s[start], len + 1);
 	return (result);
 }

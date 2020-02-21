@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 12:53:15 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/10 15:49:22 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/21 14:53:54 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 ** Tests if character is printable.
 */
 
-int		ft_isprint(int ch)
+int		ft_isprint(int c)
 {
-	if (!((ch >= 32) && (ch <= 126)))
+	if (!((c >= 32) && (c <= 126)))
 		return (0);
 	else
 		return (1);

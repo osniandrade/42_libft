@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 18:54:48 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/14 13:53:05 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/21 13:35:27 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** bytes are copied and a 'NULL' pointer is returned.
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, unsigned int n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	char					*d;
 	const unsigned char		*s;

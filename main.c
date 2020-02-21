@@ -17,14 +17,14 @@ int		main(void)
 	// ft_putstr_fd(result, 1);
 
 	// *** ft_split
-	char	**tabstr;
-	//tabstr = ft_split("          ", ' ');
-	//ft_putstr_fd(tabstr[0], 1);
-	tabstr = ft_split("lorem ipsum ", ' ');
-	while (tabstr)
-	{
-		printf("%s\n", *tabstr++);
-	}
+	// char	**tabstr;
+	// tabstr = ft_split("          ", ' ');
+	// ft_putstr_fd(tabstr[0], 1);
+	// tabstr = ft_split("lorem ipsum ", ' ');
+	// while (tabstr)
+	// {
+	// 	printf("%s\n", *tabstr++);
+	// }
 	// tabstr = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
 	// ft_putstr_fd(tabstr[0], 1);
 	// ft_putchar_fd('\n', 1);
@@ -37,5 +37,12 @@ int		main(void)
 	// tabstr = ft_split("", 'z');
 	// ft_putstr_fd(tabstr[0], 1);
 
+	// *** ft_lstnew
+	t_list		*elem;
+
+	elem = NULL;
+	ft_lstnew("lorem ipsum dolor sit");
+	free(elem);
+	
 	return (0);
 }

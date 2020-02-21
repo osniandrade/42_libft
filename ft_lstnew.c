@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/17 11:50:51 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/18 16:43:43 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/20 19:31:57 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;
 
-	if (!(head = malloc(sizeof(size_t))))
+	if (!(head = malloc(sizeof(t_list))))
 		return (NULL);
 	head->content = content;
 	head->next = NULL;

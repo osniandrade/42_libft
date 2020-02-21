@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 12:28:32 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/19 16:25:47 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/21 13:40:50 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,21 @@ static int		ft_tstspc(char ch)
 	return (0);
 }
 
-int				ft_atoi(const char *buf)
+int				ft_atoi(const char *str)
 {
 	int		signal;
 	int		num;
 
 	signal = 1;
 	num = 0;
-	while (ft_tstspc(*buf))
-		buf++;
-	if ((*buf == '+') || (*buf == '-'))
-		if (*buf++ == '-')
+	while (ft_tstspc(*str))
+		str++;
+	if ((*str == '+') || (*str == '-'))
+		if (*str++ == '-')
 			signal *= -1;
-	if (!(ft_isdigit(*buf)))
+	if (!(ft_isdigit(*str)))
 		return (0);
-	while (ft_isdigit(*buf))
-		num = num * 10 + (*buf++ - 48);
+	while (ft_isdigit(*str))
+		num = num * 10 + (*str++ - 48);
 	return (num * signal);
 }
