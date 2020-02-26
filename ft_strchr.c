@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*
-** Locates the first occurrence of 'ch' in the string pointed to by 's'.
+** Locates the first occurrence of 'c' in the string pointed to by 's'.
 ** The terminating null character is considered to be part of the string -
 ** therefore, if 'ch' is '\0', the function locates the terminatting '\0'.
 ** Returns a pointer to the located character or NULL if not found.

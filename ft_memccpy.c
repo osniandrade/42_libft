@@ -15,7 +15,7 @@
 /*
 ** Copies bytes from the string 'src' to string 'dest'. If character 'c'
 ** occurs in the string 'src', the copy stops and a pointer to the byte
-** after the copy of 'c' in the string 'dest' if returned. Otherwise, 'n'
+** after the copy of 'c' in the string 'dest' is returned. Otherwise, 'n'
 ** bytes are copied and a 'NULL' pointer is returned.
 */
 
@@ -30,9 +30,9 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	s = (unsigned char *)src;
 	while ((i < n) && ((i == 0) || (s[i - 1] != (unsigned char)c)))
 	{
-		d[i] = s[i];
-		if (d[i++] == (unsigned char)c)
-			return (d + i);
+		if ((d[i] = s[i]) == (unsigned char)c)
+			return (&d[i + 1]);
+		i++;
 	}
 	return (NULL);
 }
