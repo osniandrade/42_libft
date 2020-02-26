@@ -13,20 +13,20 @@
 #include "libft.h"
 
 /*
-** Copies bytes from the string 'src' to string 'dst'. If character 'c'
+** Copies bytes from the string 'src' to string 'dest'. If character 'c'
 ** occurs in the string 'src', the copy stops and a pointer to the byte
-** after the copy of 'c' in the string 'dst' if returned. Otherwise, 'n'
+** after the copy of 'c' in the string 'dest' if returned. Otherwise, 'n'
 ** bytes are copied and a 'NULL' pointer is returned.
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	char					*d;
 	const unsigned char		*s;
 	unsigned int			i;
 
 	i = 0;
-	d = dst;
+	d = dest;
 	s = (unsigned char *)src;
 	while ((i < n) && ((i == 0) || (s[i - 1] != (unsigned char)c)))
 	{

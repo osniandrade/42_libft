@@ -16,7 +16,7 @@
 ** Computes the length of the string 's' and returns it as an integer.
 */
 
-int		ft_strlen(const char *s)
+size_t		ft_strlen(const char *s)
 {
 	int		i;
 

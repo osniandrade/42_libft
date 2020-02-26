@@ -14,28 +14,28 @@
 
 /*
 ** Appends string 'src' to the end of 'dst'. Will NUL-terminate unless
-** 'dstsize' is 0 or the original 'dst' string was incorrect.
+** 'size' is 0 or the original 'dst' string was incorrect.
 */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	j;
-	unsigned int	size;
+	unsigned int	dstsize;
 
 	i = 0;
 	j = 0;
-	size = 0;
-	while (src[size] != '\0')
-		size++;
-	while (dst[i] && (i < dstsize))
+	dstsize = 0;
+	while (src[dstsize] != '\0')
+		dstsize++;
+	while (dst[i] && (i < size))
 		i++;
-	while (src[j] && ((i + j + 1) < dstsize))
+	while (src[j] && ((i + j + 1) < size))
 	{
 		dst[i + j] = src[j];
 		j++;
 	}
-	if (i != dstsize)
+	if (i != size)
 		dst[i + j] = '\0';
-	return (i + size);
+	return (i + dstsize);
 }

@@ -17,7 +17,7 @@
 ** begins at index 'start' and is of maximum size 'n'.
 */
 
-char	*ft_substr(char const *s, unsigned int start, unsigned int len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*result;
 

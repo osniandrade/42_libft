@@ -13,30 +13,30 @@
 #include "libft.h"
 
 /*
-** Copies 'len' bytes from string 'src' to string 'dst'. The copy
-** is always non-destructive. Returns the original value of 'dst'.
+** Copies 'n' bytes from string 'src' to string 'dest'. The copy
+** is always non-destructive. Returns the original value of 'dest'.
 */
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*d;
 	const char	*s;
 	char		*lasts;
 	char		*lastd;
 
-	d = dst;
+	d = dest;
 	s = src;
 	if (!s && !d)
 		return (NULL);
 	if (d < s)
-		while (len--)
+		while (n--)
 			*d++ = *s++;
 	else
 	{
-		lasts = (char *)s + (len - 1);
-		lastd = d + (len - 1);
-		while (len--)
+		lasts = (char *)s + (n - 1);
+		lastd = d + (n - 1);
+		while (n--)
 			*lastd-- = *lasts--;
 	}
-	return (dst);
+	return (dest);
 }

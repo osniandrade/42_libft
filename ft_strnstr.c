@@ -13,27 +13,27 @@
 #include "libft.h"
 
 /*
-** Locates the first occurrence of the NUL-terminated string 'needle' in
-** string 'haystack', where no more than 'n' characters are searched. Characters
+** Locates the first occurrence of the NUL-terminated string 'lit' in
+** string 'big', where no more than 'n' characters are searched. Characters
 ** after a '\0' are not searched.
 */
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *big, const char *lit, size_t len)
 {
 	unsigned int	i;
 	unsigned int	chksize;
 
-	chksize = ft_strlen(needle);
+	chksize = ft_strlen(lit);
 	if (!chksize)
-		return ((char *)haystack);
+		return ((char *)big);
 	i = 0;
 	while (i < len)
 	{
-		if ((ft_strncmp((char *)&haystack[i], (char *)needle, chksize)) == 0)
+		if ((ft_strncmp((char *)&big[i], (char *)lit, chksize)) == 0)
 		{
 			if ((chksize + i) > len)
 				return (0);
-			return ((char *)&haystack[i]);
+			return ((char *)&big[i]);
 		}
 		i++;
 	}

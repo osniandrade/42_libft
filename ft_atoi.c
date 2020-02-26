@@ -17,7 +17,7 @@
 ** received as an argument. Handles negative numbers.
 */
 
-static int		ft_tstspc(char ch)
+static int		ft_tstspc(const char ch)
 {
 	if ((ch == ' ') || (ch == '\f') || (ch == '\n') ||
 		(ch == '\r') || (ch == '\t') || (ch == '\v'))

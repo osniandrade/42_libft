@@ -13,11 +13,11 @@
 #include "libft.h"
 
 /*
-** Copies up to 'dstsize' - 1 characters from string 'src' to 'dst', NUL-terminating
-** the result if 'dstsize' is not 0.
+** Copies up to 'size' - 1 characters from string 'src' to 'dst', NUL-terminating
+** the result if 'size' is not 0.
 */
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	int		i;
 	int		old;
@@ -28,10 +28,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		return (0);
 	while (src[old] != '\0')
 		old++;
-	if (dstsize == 0)
+	if (size == 0)
 		return (old);
-	if (dstsize > 0)
-		while ((src[++i] != '\0') && (i < (int)(dstsize - 1)))
+	if (size > 0)
+		while ((src[++i] != '\0') && (i < (int)(size - 1)))
 			dst[i] = src[i];
 	dst[i] = '\0';
 	return (old);
