@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 12:52:33 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/21 13:44:21 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/27 12:34:22 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int		ft_isalnum(int c)
 {
-	if (!(ft_isalpha(c)) || !(ft_isdigit(c)))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/17 19:11:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/17 19:56:17 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/27 15:27:22 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,17 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*node;
+	t_list	*list;
+	t_list	*nxtnode;
 
-	node = *lst;
-	if (lst)
+	if (!(list = *lst))
+		return ;
+	while (list)
 	{
-		while (node)
-		{
-			ft_lstdelone(node, del);
-			node = node->next;
-		}
-		*lst = NULL;
+		nxtnode = list->next;
+		del(list->content);
+		free(list);
+		list = nxtnode;
 	}
+	*lst = NULL;
 }

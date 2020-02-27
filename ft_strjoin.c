@@ -6,11 +6,16 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 17:34:08 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/21 13:21:16 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/27 13:08:58 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Allocates and returns a new string, which is the result of the concatenation
+** of ’s1’ and ’s2’.
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

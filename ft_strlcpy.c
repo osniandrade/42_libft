@@ -6,15 +6,15 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 12:55:42 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/21 15:01:41 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/27 12:36:07 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Copies up to 'size' - 1 characters from string 'src' to 'dst', NUL-terminating
-** the result if 'size' is not 0.
+** Copies up to 'size' - 1 characters from string 'src' to 'dst',
+** NUL-terminating the result if 'size' is not 0.
 */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

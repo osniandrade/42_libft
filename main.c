@@ -87,13 +87,15 @@ int		main(void)
 	// free(vstrnstr1);
 	// free(vstrnstr2);
 // *** ft_strncmp
-	char	*vstrncmp1 = (char *)malloc(15);
-	char	*vstrncmp2 = (char *)malloc(15);
-	ft_strlcpy(vstrncmp1, "teste", 5);
-	ft_strlcpy(vstrncmp2, "testa", 5);
-	ft_strncmp(vstrncmp1, vstrncmp2, 5);
-	free(vstrncmp1);
-	free(vstrncmp2);
+	// char	*vstrncmp1 = (char *)malloc(15);
+	// char	*vstrncmp2 = (char *)malloc(15);
+	// ft_strlcpy(vstrncmp1, "teste", 5);
+	// ft_strlcpy(vstrncmp2, "testa", 5);
+	// ft_strncmp(vstrncmp1, vstrncmp2, 5);
+	// free(vstrncmp1);
+	// free(vstrncmp2);
+// *** ft_atoi
+	ft_atoi("1556");
 
 	return (0);
 }
