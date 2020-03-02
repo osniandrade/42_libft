@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ocarlos- <ocarlos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 13:45:11 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/19 17:41:20 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:55:29 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ char		*ft_strtrim(char const *s1, char const *set)
 	int		s1size;
 	char	*result;
 
-	if (!set)
-		return ((char *)s1);
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	s1size = ft_strlen(s1);
+	if (*set == '\0' || s1size == 0)
+		return (ft_strdup(s1));
 	i[0] = 0;
 	i[1] = s1size;
 	while (!(ft_chkchar(s1[i[0]], set)) && i[0] < s1size)

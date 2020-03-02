@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ocarlos- <ocarlos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 13:38:59 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/18 16:45:15 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:59:50 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*result;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	if (!(result = (char *)malloc(ft_strlen(s) + 1)))
 		return (NULL);

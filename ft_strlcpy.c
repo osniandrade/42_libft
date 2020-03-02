@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ocarlos- <ocarlos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 12:55:42 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/27 12:36:07 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:09:09 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = -1;
 	old = 0;
-	if (!dst)
+	if (!dst || !src)
 		return (0);
 	while (src[old] != '\0')
 		old++;
