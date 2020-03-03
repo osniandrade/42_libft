@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 13:45:11 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/03/03 13:07:49 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/03/03 15:59:06 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	while (!(ft_chkchar(s1[i[1]], set)) && i[1] != 0)
 		i[1]--;
 	if (i[1] <= 0 && i[0] >= s1size)
-		return (ft_strdup("\0"));
+		return (ft_strdup(""));
 	i[1] = s1size - i[1];
 	result = ft_substr(s1, i[0], (s1size - i[1] - i[0] + 1));
 	return (result);

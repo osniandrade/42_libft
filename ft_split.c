@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 15:07:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/03/03 13:11:16 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/03/03 15:51:22 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ char	**ft_split(char const *s, char c)
 	char	*temp;
 	int		i[3];
 
-	if (!s || !c || !(temp = (s) ? ft_strdup(s) : NULL) ||
-		!(result = ft_setarray(temp, c)))
+	temp = (s) ? ft_strdup(s) : NULL;
+	if (!s || !c || !temp || !(result = ft_setarray(temp, c)))
 		return (NULL);
 	ft_setnull(i);
 	i[0] = (temp) ? ft_strlen(temp) : 0;
@@ -80,8 +80,9 @@ char	**ft_split(char const *s, char c)
 			i[2]++;
 		else
 		{
-			if (!(result[i[1]++] = ft_strdup(&temp[i[2]])))
+			if (!(result[i[1]] = ft_strdup(&temp[i[2]])))
 				return (NULL);
+			i[1]++;
 			i[2] += ft_strlen(&temp[i[2]]);
 		}
 	}
