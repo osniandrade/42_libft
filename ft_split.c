@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ocarlos- <ocarlos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 15:07:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/21 13:23:36 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/03/03 13:11:16 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	**ft_setarray(char *temp, char ch)
 
 	i = 0;
 	words = 0;
-	size = ft_strlen(temp);
+	size = (temp) ? ft_strlen(temp) : 0;
 	while (temp[i] != '\0' && i < size)
 	{
 		if (temp[i] != ch)
@@ -68,11 +68,11 @@ char	**ft_split(char const *s, char c)
 	char	*temp;
 	int		i[3];
 
-	if (!s || !c || !(temp = ft_strdup(s)) ||
+	if (!s || !c || !(temp = (s) ? ft_strdup(s) : NULL) ||
 		!(result = ft_setarray(temp, c)))
 		return (NULL);
 	ft_setnull(i);
-	i[0] = ft_strlen(temp);
+	i[0] = (temp) ? ft_strlen(temp) : 0;
 	ft_setdelim(temp, c);
 	while (i[2] < i[0])
 	{

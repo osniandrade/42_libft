@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ocarlos- <ocarlos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/05 10:21:46 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/02/21 15:24:22 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/03/03 13:14:32 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static char	*ft_strrev(char *num)
 	int		size;
 
 	i = 0;
-	size = (ft_strlen(num) - 1);
+	size = (num) ? (ft_strlen(num) - 1) : 0;
 	while (i <= (size / 2))
 	{
 		digit = num[i];
